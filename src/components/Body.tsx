@@ -56,7 +56,7 @@ const Body :React.FC= () => {
             </div>
             <div className="animation">
               <AnimationStyle/>
-              <img className='img-port' src="portfolio-img.jpeg" alt="" width={350} height={350} />
+              <img className='img-port' src="portfolio-img.jpeg" alt="" width={320} height={320} />
             </div>
         </div>
 

@@ -438,8 +438,10 @@ footer h1{
   color: var(--primary-color);
 }
 .img-port{
+  width: 320px;
+  height: 320px;
   position: absolute;
-  right: 20%;
+  right: 16%;
   bottom:24%;
   border-radius: 50%;
   border: 3px solid var(--fill-color);
@@ -511,6 +513,9 @@ footer h1{
   width: 100%;
 
  }  
+ input{
+  width: 50rem;
+ }
   @media screen and (max-width:510px) {
     html{
       font-size: 50%;
@@ -534,10 +539,22 @@ footer h1{
   .frontend-skills{
     width: 320px;
   }
+  input{
+    width: 40rem;
+  }
 }
 @media screen and (max-width:350px) {
   .proj-card{
     width: 320px;
   }
-  
+ form{
+  width: 100%;
+ }
+ input{
+  width: 32rem
+ };
+ .img-port{
+
+  right: 0;
+ }
 }
