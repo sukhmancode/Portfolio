@@ -25,9 +25,16 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
-html{
-  font-size: 62.5%;
-}
+
+  
+  html,body{
+    font-size: 60.5%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
 p{
   color: var(--p-color);
 }
@@ -167,7 +174,7 @@ nav{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #262639;
+  background-color: #202027;
   
 }
 .skills-heading{
@@ -445,12 +452,7 @@ footer h1{
   display: none;
 }
 @media screen and (max-width:1024px) {
-  html,body{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
+
   .about{
     flex-direction: column-reverse;
     align-items: center;
@@ -472,12 +474,13 @@ footer h1{
 
 @media screen and (max-width:650px) {
  
-  nav{
-    justify-content: space-between;
-  }
+ html{
+  font-size: 55%;
+ }
  
   .nav-btn{
     display: flex;
+   
   }
   .nav-close{
     position: absolute;
@@ -491,13 +494,15 @@ footer h1{
     height: fit-content;
     width: 100%;
     display: flex;
-    padding: 2rem;
+    padding: 5rem;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 3rem;
     background-color: #171721;
     transition: 1s ease-in-out;
     transform: translateY(-100vh);
     flex-direction: column;
+    z-index: 11111111;
+    
   }
   .responsive-nav{
     transform: none;
@@ -505,34 +510,18 @@ footer h1{
  .skills-heading{
   width: 100%;
 
- }  .skills{
-  width: 100vh;
-  padding: 5rem;
-}
- 
+ }  
   @media screen and (max-width:510px) {
-    .about{
-      width: 100vh;
-    }
     html{
-      font-size: 55%;
+      font-size: 50%;
     }
     .body-wrapper{
       
       justify-content: center;
     }
-    .projects-desc{
-      width: 100%;
-    } 
-  .contact{
-    width: 100vh;
-  }
-  .projects-section{
-    width: 100vh;
-  }
-  footer{
-    width: 100vh;
-  }
+ .skills-fr{
+  padding: 1rem;
+ }
   .nav-elements-footer {
     align-items: center;
     justify-content: center;
@@ -542,4 +531,13 @@ footer h1{
   right: 0;
 }
   }
+  .frontend-skills{
+    width: 320px;
+  }
+}
+@media screen and (max-width:350px) {
+  .proj-card{
+    width: 320px;
+  }
+  
 }
