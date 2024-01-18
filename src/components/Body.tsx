@@ -44,7 +44,7 @@ const Body :React.FC= () => {
 
   return (
     <div className='body-wrapper'>
-        <div className="about">
+        <div className="about" id='about'>
             <div className="heading1">
               <p className='starters'>Start /&gt;</p>
               <div className="headings-anim">
@@ -60,7 +60,7 @@ const Body :React.FC= () => {
             </div>
         </div>
 
-        <section className="skills" >
+        <section className="skills" id='skills'>
           <div className="skills-heading">
             <h1>Skills</h1>
             <p>Welcome to my skills page, where I showcase my proficiency in various domains of technology. My skill set revolves around programming,web development, and more. Here's a snapshot of what I bring to the table:</p>
@@ -96,7 +96,7 @@ const Body :React.FC= () => {
           </div>
         </section>
 
-        <section className="projects-section">
+        <section className="projects-section" id='projects'>
           <div className="skills-heading">
             <h1>Projects</h1>
             <p className='projects-desc'>Welcome to the heart of my portfolio, where I showcase a curated selection of projects that reflect my passion for innovation and problem-solving. Each project is a testament to my skills, creativity, and dedication to delivering exceptional results Dive into the diverse array of projects below to get a glimpse of my capabilities and the impact I strive to make in the world of Web Development.</p>
@@ -129,7 +129,7 @@ const Body :React.FC= () => {
           </div>
         </section>
 
-        <section className="contact">
+        <section className="contact" id='contact'>
           <div className="contact-form">
            <h1>Contact </h1>
            <p>Feel free to reach out to me for any questions or opportunities!</p>

@@ -15,10 +15,10 @@ const Nav :React.FC= () => {
             <p><span className='arrow'>&lt;</span>SUKHMAN <span> / </span><span className='arrow'>&gt;</span></p>
         </div>
         <div className="nav-elements" ref={navref}>
-            <span>About <span className='arrow'>/&gt;</span></span>
-            <span>Skills <span className='arrow'>/&gt;</span></span>
-            <span>Projects<span className='arrow'>/&gt;</span></span>
-            <span>Contact<span className='arrow'>/&gt;</span></span>
+            <span><a href='about'>About <span className='arrow'>/&gt;</span></a></span>
+            <span><a href='skills'>Skills <span className='arrow'>/&gt;</span></a></span>
+            <span><a href='projects'>Projects<span className='arrow'>/&gt;</span></a></span>
+            <span><a href='contact'>Contact<span className='arrow'>/&gt;</span></a></span>
         </div>
        
        <div className='nav-btn nav-close' onClick={showNav}>
