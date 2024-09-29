@@ -1,7 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import AnimationStyle from './AnimationStyle';
-import Frontend from '../data/frontend';
-import Others from '../data/others';
+
 import Projects from '../data/project';
 import { FaInstagram ,FaLinkedin} from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
