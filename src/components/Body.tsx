@@ -59,8 +59,40 @@ const Body :React.FC= () => {
               <img className='img-port' src="portfolio-img.jpeg" alt="" width={320} height={320} />
             </div>
         </div>
+        <section className="projects-section" id='projects'>
+          <div className="skills-heading">
+            <h1>Projects</h1>
+            {/* <p className='projects-desc'>Welcome to the heart of my portfolio, where I showcase a curated selection of projects that reflect my passion for innovation and problem-solving. Each project is a testament to my skills, creativity, and dedication to delivering exceptional results Dive into the diverse array of projects below to get a glimpse of my capabilities and the impact I strive to make in the world of Web Development.</p> */}
+          </div>
+          <div className="project-table">
+            <p className={selectedFilter==="all" ? "active-status":""} onClick={()=>handleClick("all")}>All</p>
+            <p className={selectedFilter==="beginner" ? "active-status":""} onClick={()=>handleClick("beginner")}>Beginner Level</p>
+            <p className={selectedFilter==="advanced" ? "active-status":""} onClick={()=>handleClick("advanced")}>Advance Level</p>
+          </div>
 
-        <section className="skills" id='skills'>
+          <div className="projects">
+            <div className="project-1">
+              {
+                Filteritems.map((proj)=>(
+                <div className='proj-card'>
+                  <img src={proj.img} width={300} height={150}/>
+                  <div className='proj-skill-parent'>
+                  {proj.skill[0] && <p className='proj-skill'>{proj.skill[0]}</p>}
+                  {proj.skill[1] && <p className='proj-skill'>{proj.skill[1]}</p>}
+                  {proj.skill[2] && <p className='proj-skill'>{proj.skill[2]}</p>}
+                 </div>
+                 <h1 className='proj-name'>{proj.name}</h1>
+                 <div className="view-btn">
+                 <a href={proj.url} target='_blank'><button>View App</button></a> 
+                 </div>
+               </div>
+                ))
+              }
+            </div>
+          </div>
+        </section>
+        
+        {/* <section className="skills" id='skills'>
           <div className="skills-heading">
             <h1>Skills</h1>
             <p>Welcome to my skills page, where I showcase my proficiency in various domains of technology. My skill set revolves around programming,web development, and more. Here's a snapshot of what I bring to the table:</p>
@@ -94,40 +126,9 @@ const Body :React.FC= () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="projects-section" id='projects'>
-          <div className="skills-heading">
-            <h1>Projects</h1>
-            <p className='projects-desc'>Welcome to the heart of my portfolio, where I showcase a curated selection of projects that reflect my passion for innovation and problem-solving. Each project is a testament to my skills, creativity, and dedication to delivering exceptional results Dive into the diverse array of projects below to get a glimpse of my capabilities and the impact I strive to make in the world of Web Development.</p>
-          </div>
-          <div className="project-table">
-            <p className={selectedFilter==="all" ? "active-status":""} onClick={()=>handleClick("all")}>All</p>
-            <p className={selectedFilter==="beginner" ? "active-status":""} onClick={()=>handleClick("beginner")}>Beginner Level</p>
-            <p className={selectedFilter==="advanced" ? "active-status":""} onClick={()=>handleClick("advanced")}>Advance Level</p>
-          </div>
-
-          <div className="projects">
-            <div className="project-1">
-              {
-                Filteritems.map((proj)=>(
-                <div className='proj-card'>
-                  <img src={proj.img} width={300} height={150}/>
-                  <div className='proj-skill-parent'>
-                  {proj.skill[0] && <p className='proj-skill'>{proj.skill[0]}</p>}
-                  {proj.skill[1] && <p className='proj-skill'>{proj.skill[1]}</p>}
-                  {proj.skill[2] && <p className='proj-skill'>{proj.skill[2]}</p>}
-                 </div>
-                 <h1 className='proj-name'>{proj.name}</h1>
-                 <div className="view-btn">
-                 <a href={proj.url} target='_blank'><button>View App</button></a> 
-                 </div>
-               </div>
-                ))
-              }
-            </div>
-          </div>
-        </section>
+     
 
         <section className="contact" id='contact'>
           <div className="contact-form">

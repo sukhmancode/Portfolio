@@ -86,11 +86,15 @@ nav{
   gap:1.8rem;
 }
 .nav-elements span{
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   font-size: 2.2rem;
   font-weight: 700;
   cursor: pointer;
+}
+.nav-elements span a {
+  color:var(--p-color)
 }
 .animation{
   display: flex;
@@ -243,8 +247,7 @@ nav{
 }
 .projects-section{
   font-family: var(--poppins);
-  padding: 5rem;
-  background: linear-gradient(to bottom,#1c1c27,#191924);
+  padding-inline: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -277,10 +280,12 @@ nav{
   cursor: pointer;
 }
 .projects{
+  padding-block: 5rem;
   display: flex;
   flex-wrap: wrap;
 }
 .project-1{
+
   align-items: center;
   justify-content: center;
   margin-top: 4rem;
@@ -290,19 +295,51 @@ nav{
   gap:2rem;
 }
 .proj-card{
+  border-radius: 8px;
+margin: 1rem;
+  position: relative;
+  width: fit-content;
   background-color: #171721;
-  padding: 1rem;
+  padding: 2rem;
   box-shadow: 0 0 30px #000;
   display: flex;
   flex-direction: column;
   gap:1.4rem;
   transition: all 0.3s ease-in;
 }
-.proj-card:hover{
-  box-shadow: 0 0 70px #000;
-  transform: translateY(-1rem);
-  cursor: pointer;
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
+
+.proj-card::after, .proj-card::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #00ff99, #006aff);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 0.5rem;
+  border-radius: 10px;
+  animation: 2s spin linear infinite;
+}
+.proj-card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
 .proj-card img{
   border-radius: 4px;
 }
@@ -344,7 +381,6 @@ nav{
   justify-content: center;
   flex-direction: column;
   font-family: var(--poppins);
-  background-color: #1c1c27;
 }
 .contact-form{
   display: flex;
