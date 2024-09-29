@@ -1,6 +1,5 @@
 import React, { useEffect,useState } from 'react'
 import AnimationStyle from './AnimationStyle';
-
 import Projects from '../data/project';
 import { FaInstagram ,FaLinkedin} from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
